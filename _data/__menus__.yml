@@ -1,0 +1,13 @@
+header:
+  - url: /category1
+    title: Category 1
+    identifier: category1
+  - url: /category2
+    title: Category 2
+    identifier: category2
+
+submenu:
+  - url: /category2_1
+    title: Category 2_1
+    identifier: category2_1
+    parent: category2

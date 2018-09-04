@@ -1,0 +1,18 @@
+{% if menu %}
+<ul class="sub-menu collapse" id="{{ identifier }}">
+  {% for item in menu reversed %}
+    {% if item.children %}
+      <li  data-toggle="collapse" data-target="#{{ item.identifier }}" class="collapsed">
+        <a href="#" title="Go to {{ item.title }}"><i class="fa fa-gift fa-lg"></i> {{ item.title }} <span class="arrow"></span></a>
+      </li>
+      {% assign menu = item.children %}
+      {% assign identifier = item.identifier %}
+      {% include left_submenu_bar.html %}
+    {% elsif item.children == null %}
+    <li  data-toggle="collapse" data-target="#{{ item.identifier }}" class="collapsed">
+      <a href="{{ item.url }}" title="Go to {{ item.title }}"><i class="fa fa-gift fa-lg"></i> {{ item.title }} <span class="arrow"></span></a>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}
