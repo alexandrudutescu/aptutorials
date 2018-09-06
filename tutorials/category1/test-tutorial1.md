@@ -1,9 +1,7 @@
 ---
 layout: main
 title: Tutorial 1
-menus:
-  category1:
-    url: tutorials/category1/test-tutorial1.html
+menus: category1
 ---
 # Spectans venturi sororia membra vertigine
 

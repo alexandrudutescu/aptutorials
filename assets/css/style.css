@@ -10,6 +10,9 @@ body {
 h1 {
   text-align: center;
 }
+.main-page{
+  margin-top: calc(4em + 6px);
+}
 .header:before {
     content: "";
     -webkit-box-flex: 1;
@@ -69,9 +72,7 @@ h1 {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
-    margin: 0 auto;
     max-width: 80rem;
-    padding: 0 1em;
     width: 100%;
 }
 .header--small {
@@ -79,6 +80,7 @@ h1 {
     height: 4em;
 }
 .nav-side-menu {
+  margin-top: calc(4em + 6px);
   overflow: auto;
   font-family: verdana;
   font-size: 12px;
@@ -153,7 +155,9 @@ h1 {
   margin-left: 0px;
 }
 .nav-side-menu ul .sub-menu li:hover,
-.nav-side-menu li .sub-menu li:hover {
+.nav-side-menu li .sub-menu li:hover,
+.nav-side-menu ul .sub-menu li:active,
+.nav-side-menu li .sub-menu li:active {
   background-color: #020203;
 }
 .nav-side-menu ul .sub-menu li:before,
