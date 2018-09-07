@@ -13,34 +13,39 @@
       while(collapsed && i < parentList.length){
         if(parentList[i].classList.contains('sub-menu')){
           $("#" + parentList[i].id).addClass("in");
+          $("#li_" + parentList[i].id).removeClass("collapsed");
+          $("#li_" + parentList[i].id).addClass("selected");
           i++;
         }
         else{
           collapsed = false;
         }
       }
+
+      var parentLis = $(cat).closest("li");
+      console.log(parentLis.length);
     }
   });
 
   function setSelectedCategory(identifier, url) {
       window.sessionStorage.setItem("category", identifier);
       window.location.href = url;
-    }
+  }
 </script>
 
 {% if menu %}
 <ul class="sub-menu collapse" id="{{ identifier }}">
-  {% for item in menu reversed %}
+  {% for item in menu %}
     {% if item.children %}
-      <li  data-toggle="collapse" data-target="#{{ item.identifier }}" class="collapsed">
+      <li  data-toggle="collapse" data-target="#{{ item.identifier }}" class="collapsed" id="li_{{ item.identifier }}">
         <a href="#" title="Go to {{ item.title }}" ><i class="fa fa-gift fa-lg"></i> {{ item.title }} <span class="arrow"></span></a>
       </li>
       {% assign menu = item.children %}
       {% assign identifier = item.identifier %}
       {% include left_submenu_bar.html %}
     {% elsif item.children == null %}
-    <li  data-toggle="collapse" id="{{ item.identifier }}" class="collapsed">
-      <a title="Go to {{ item.title }}" onclick="setSelectedCategory('{{ item.identifier }}', '{{ item.url}}')"><i class="fa fa-gift fa-lg"></i> {{ item.title }} <span class="arrow"></span></a>
+    <li  data-toggle="collapse" id="{{ item.identifier }}">
+      <a title="Go to {{ item.title }}" onclick="setSelectedCategory('{{ item.identifier }}', '{{ item.url}}')"><i class="fa fa-gift fa-lg"></i> {{ item.title }}</a>
     </li>
     {% endif %}
   {% endfor %}

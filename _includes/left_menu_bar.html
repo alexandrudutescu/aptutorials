@@ -8,7 +8,7 @@
               <i class="fa fa-dashboard fa-lg"></i> Tutorials</a>
             </li>
         {% for item in site.menus.header reversed %}
-          <li  data-toggle="collapse" data-target="#{{ item.identifier }}" class="collapsed">
+          <li  data-toggle="collapse" data-target="#{{ item.identifier }}" class="collapsed" id="li_{{ item.identifier }}">
             <a href="#" title="Go to {{ item.title }}"><i class="fa fa-gift fa-lg"></i> {{ item.title }} <span class="arrow"></span></a>
           </li>
             {% if item.children %}
