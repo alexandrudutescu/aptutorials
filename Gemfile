@@ -21,7 +21,6 @@ gem "jekyll", "~> 3.8.3"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
-  gem 'jekyll-theme-bootstrap', '~> 0.0.5'
   gem 'jekyll-menus'
 end
 
