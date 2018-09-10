@@ -7,12 +7,15 @@ jQuery(function() {
   });
 
   // Get the generated search_data.json file so lunr.js can search it locally.
-  window.data = $.getJSON('/search_data.json');
+  window.data = $.getJSON('/search_data.json')
+                .done(function() {
+                  console.log( "second success" );
+                });
 
   // Wait for the data to load and add it to lunr
   window.data.then(function(loaded_data){
     $.each(loaded_data, function(index, value){
-      console.log(index +' - '+ value);
+      console.log(index +' - '+ value.url);
       window.idx.add(
         $.extend({ "id": index }, value)
       );
@@ -21,15 +24,46 @@ jQuery(function() {
 
   // Event when the form is submitted
   $("#searchForm").submit(function(event){
+      //window.location.href = "/search";
       event.preventDefault();
       var query = $("#search-box").val(); // Get the value for the text field
       var results = window.idx.search(query); // Get lunr to perform a search
-      display_search_results(results); // Hand the results off to be displayed
+
+      var form = $(this);
+      var url = form.attr('action');
+
+      $.ajax({
+             type: "GET",
+             url: url,
+             data: form.serialize(), // serializes the form's elements.
+             success: function(data)
+             {
+                 //console.log(data);
+                 // Compose response
+                 processAjaxData(data, results, "/search.html");
+             }
+       });
+
+
+       event.preventDefault(); // avoid to execute the actual submit of the form.
+
   });
 
-  function display_search_results(results) {
+
+  function processAjaxData(response, results, urlPath){
+      var objHtml = $.parseHTML(response);
+
+      var content = $(objHtml).find("#content");
+      console.log(content.prop("outerHTML"));
+      document.getElementById("content").innerHTML = content.prop("outerHTML");
+      document.getElementById("search-results").innerHTML = display_search_results(objHtml, results).prop("outerHTML");
+      document.title = response.pageTitle;
+      window.history.pushState({"html":response,"pageTitle":response.pageTitle},"", urlPath);
+  }
+
+  function display_search_results(objHtml, results) {
     console.log('Performing search!');
-    var $search_results = $("#search-results");
+    var $search_results = $(objHtml).find("#search-results");
 
     // Wait for data to load
     window.data.then(function(loaded_data) {
@@ -40,8 +74,11 @@ jQuery(function() {
 
         // Iterate over the results
         results.forEach(function(result) {
+          console.log(result.ref);
+          console.log(loaded_data);
+          console.log(loaded_data[result.ref]);
           var item = loaded_data[result.ref];
-
+          console.log(item);
           // Build a snippet of HTML for this result
           var appendString = '<li><a href="' + item.url + '">' + item.title + '</a></li>';
 
@@ -53,5 +90,7 @@ jQuery(function() {
         $search_results.html('<li>No results found.<br/>Please rephrase.</li>');
       }
     });
+    //console.log($search_results);
+    return $search_results;
   }
 });

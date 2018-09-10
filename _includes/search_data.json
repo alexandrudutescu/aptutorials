@@ -1,0 +1,17 @@
+{% if items == null %}
+  {% assign items = site.menus.header %}
+{% endif %}
+{% for item in items %}
+  {% if item.children %}
+    {% assign items = item.children %}
+    {% include search_data.json %}
+    {% elsif item.children == null %}
+    "{{ item.identifier }}": {
+      "title": "{{ item.title | xml_escape }}",
+      "id": "{{ item.identifier | xml_escape }}",
+      "url": "{{ item.url | xml_escape }}",
+      "category": "{{ item.parent | xml_escape }}"
+    }
+    {% endif %}
+  {% unless forloop.last %},{% endunless %}
+{% endfor %}
