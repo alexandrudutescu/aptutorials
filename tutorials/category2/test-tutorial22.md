@@ -4,7 +4,9 @@
 
 layout: main
 title: Tutorial 2.2
-menus: category2
+menus: 
+    category2:
+        weight: 3
 ---
 # Spectans venturi sororia membra vertigine
 

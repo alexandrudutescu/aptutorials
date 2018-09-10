@@ -21,7 +21,6 @@ jQuery(function() {
 
   // Event when the form is submitted
   $("#searchForm").submit(function(event){
-      console.log('Submit detected!');
       event.preventDefault();
       var query = $("#search-box").val(); // Get the value for the text field
       var results = window.idx.search(query); // Get lunr to perform a search

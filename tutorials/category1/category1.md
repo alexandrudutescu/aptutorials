@@ -2,8 +2,8 @@
 layout: main
 title: Category 1
 menus:
-    header:
-      title: Category 1
-      url: /category1/category1.html
-      identifier: category1
+  header:
+    title: Category 1
+    identifier: category1
+    weight: 1
 ---      

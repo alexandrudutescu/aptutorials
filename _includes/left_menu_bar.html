@@ -1,15 +1,14 @@
 <div class="nav-side-menu">
-
     <div class="menu-list">
         <!-- ##################################################### -->
         <ul id="menu-content" class="menu-content collapse out">
-            <li>
+            <!-- <li>
               <a href="/">
               <i class="fa fa-dashboard fa-lg"></i> Tutorials</a>
-            </li>
-        {% for item in site.menus.header reversed %}
-          <li  data-toggle="collapse" data-target="#{{ item.identifier }}" class="collapsed" id="li_{{ item.identifier }}">
-            <a href="#" title="Go to {{ item.title }}"><i class="fa fa-gift fa-lg"></i> {{ item.title }} <span class="arrow"></span></a>
+            </li> -->
+        {% for item in site.menus.header %}
+          <li  data-toggle="collapse" data-target="#ul_{{ item.identifier }}" class="collapsed" id="{{ item.identifier }}">
+            <a href="{{ item.url }}"><i class="fa fa-gift fa-lg"></i>{{ item.title }}</a><a><span class="arrow"></span></a>
           </li>
             {% if item.children %}
               {% assign menu = item.children %}

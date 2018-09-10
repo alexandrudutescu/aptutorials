@@ -26,9 +26,6 @@ h1 {
 input.form-control{
   font-size: 12px;
 }
-.main-page{
-  margin-top: 85px;
-}
 .left{
   float: left;
 }
@@ -88,8 +85,8 @@ input.form-control{
 }
 
 .main-header .title > h1{
-  margin: 15px 0 2px;
-  font-size: 15px;
+  margin: 21px 0 2px;
+  font-size: 18px;
   font-family: 'Raleway', sans-serif;
   color: #fff;
   line-height: 1;
@@ -98,20 +95,6 @@ input.form-control{
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.main-header .title > h2{
-  margin: 2px 0;
-  font-size: 13px;
-  font-family: 'Open Sans', sans-serif;
-  color: #fff;
-  line-height: 1;
-  padding: 0;
-  text-transform: uppercase;
-
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -193,17 +176,11 @@ input.form-control{
   background-color: #E40046;
 }
 
-.nav-side-menu li .sub-menu li.active {
-  background-color: #E40046;
-  color: #fff;
-}
-
 .nav-side-menu li :not(collapsed) a{
   color: #E40046;
 }
 
-.nav-side-menu ul .sub-menu li.active a,
-.nav-side-menu li .sub-menu li.active a {
+.nav-side-menu li.active a {
   color: #fff;
 }
 .nav-side-menu ul .sub-menu li:before,
@@ -283,9 +260,25 @@ input.form-control{
 }
 
 
+/*** CONTENT ***/
+
+.main-page{
+  margin-top: 85px;
+  margin-bottom: 85px;
+}
+
+.main-page a{
+  font-size: 14px;
+}
+
+.main-page a:hover, .main-page a:focus{
+  text-decoration: none;
+}
+
+
 /*** FOOTER ***/
 footer {
-  position:absolute;
+  position:fixed;
   bottom: 0;
   width:100%;
 }
