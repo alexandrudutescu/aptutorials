@@ -5,7 +5,7 @@
 layout: main
 title: Tutorial 2
 menus: 
-    category2:
+    tutorials_category2:
         title: Tutorial 2
         weight: 1
 ---

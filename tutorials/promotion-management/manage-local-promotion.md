@@ -2,7 +2,7 @@
 layout: main
 title: Manage Local Promotion
 menus: 
-    promo-management:   
+    tutorials_promotion_management:   
         weight: 1
 permalink: /tutorials/promotion-management/manage-local-promotion
 ---

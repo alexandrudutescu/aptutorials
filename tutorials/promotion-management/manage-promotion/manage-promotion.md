@@ -2,9 +2,9 @@
 layout: main
 title: Manage Promotion
 menus: 
-    promo-management:
+    tutorials_promotion_management:
         title: Manage Promotion
-        identifier: manage-promotion
+        identifier: tutorials_promotion_management_manage_promotion
         weight: 0
 permalink: /tutorials/promotion-management/manage-promotion
 ---

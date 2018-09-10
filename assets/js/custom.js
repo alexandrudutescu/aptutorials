@@ -30,12 +30,13 @@
       var url = $(this).attr("href");
 
       if(url){
+        if(url.split(".").pop() == "html")
+          url = url.slice(0, -5);
+
         var identifier = url.split("/").pop();
 
         if(identifier && identifier != "search"){
-          if(identifier.split(".").pop() == "html")
-            identifier = identifier.slice(0, -5);
-          
+          identifier = createIdentifier(url);
           setSelectedCategory(identifier, url);
         }
       window.location.href = url;
@@ -48,6 +49,12 @@
     if(url){
       window.sessionStorage.setItem("category", identifier);
     }
+  }
+
+  function createIdentifier(url) {
+    if(url.slice(0,1) == "/")
+      url = url.substring(1);
+    return url.split("/").join("_").split("-").join("_");
   }
   
 

@@ -2,10 +2,11 @@
 layout: main
 title: Category 2.1
 menus:
-  category2:
+  tutorials_category2:
     title: Category 2.1
-    identifier: category2_1
+    identifier: tutorials_category2_category2_1
     weight: 0
+permalink: /tutorials/category2/category2_1
 ---
 # Spectans venturi sororia membra vertigine
 

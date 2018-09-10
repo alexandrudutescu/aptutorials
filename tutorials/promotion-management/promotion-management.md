@@ -4,7 +4,7 @@ title: Promotion Management
 menus:
     header:
       title: Promotion Management
-      identifier: promo-management
+      identifier: tutorials_promotion_management
       weight: 3
 permalink: /tutorials/promotion-management
 ---      

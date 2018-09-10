@@ -2,7 +2,7 @@
 layout: main
 title: Promotion Calendar
 menus: 
-    promo-management:
+    tutorials_promotion_management:
         weight: 2
 permalink: /tutorials/promotion-management/promotion-calendar
 ---
