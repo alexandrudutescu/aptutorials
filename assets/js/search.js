@@ -9,13 +9,12 @@ jQuery(function() {
   // Get the generated search_data.json file so lunr.js can search it locally.
   window.data = $.getJSON('/search_data.json')
                 .done(function() {
-                  console.log( "second success" );
+                  //console.log( "second success" );
                 });
 
   // Wait for the data to load and add it to lunr
   window.data.then(function(loaded_data){
     $.each(loaded_data, function(index, value){
-      console.log(index +' - '+ value.url);
       window.idx.add(
         $.extend({ "id": index }, value)
       );
@@ -36,22 +35,19 @@ jQuery(function() {
              data: form.serialize(), // serializes the form's elements.
              success: function(data)
              {
-                 //console.log(data);
                  // Compose response
                  processAjaxData(data, results, "/search.html");
              }
        });
 
-
        event.preventDefault(); // avoid to execute the actual submit of the form.
-
-  });
+});
 
 
   function processAjaxData(response, results, urlPath){
       var objHtml = $.parseHTML(response);
-
       var content = $(objHtml).find("#content");
+
       document.getElementById("content").innerHTML = content.prop("innerHTML");
       document.getElementById("search-results").innerHTML = display_search_results(objHtml, results).prop("innerHTML");
       document.title = response.pageTitle;
@@ -59,7 +55,6 @@ jQuery(function() {
   }
 
   function display_search_results(objHtml, results) {
-    console.log('Performing search!');
     var $search_results = $(objHtml).find("#search-results");
 
     // Wait for data to load
