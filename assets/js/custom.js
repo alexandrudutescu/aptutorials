@@ -27,7 +27,7 @@
   function createIdentifier(url) {
     if(url.slice(0,1) == "/")
       url = url.substring(1);
-    if(url.slice(-1) == "/")
+    if(url.slice(-1) == "/" || url.slice(-1) == "#")
       url = url.slice(0, -1);
     return url.split("/").join("_").split("-").join("_");
   }

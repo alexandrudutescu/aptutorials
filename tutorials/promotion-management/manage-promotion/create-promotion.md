@@ -6,4 +6,150 @@ menus:
         weight: 0
 permalink: /tutorials/promotion-management/manage-promotion/create-promotion
 ---
-#CREATE!!
+
+
+Creating a Promotion involves the following steps:
+- Open the Create Promotion Wiazard
+- Fill in the required details
+   * Promotion Details
+   * Division and Company
+   * Type of Promotion
+   * Items
+   * Promotion Summary
+- Related articles
+
+<br /><br />
+
+### Open the Create Promotion Wizard
+
+<br />
+From the Dashboard choose **Promotion Management**, then **Manage Promotion**. Click the **Create** button.
+
+<br />
+![image](/assets/images/fig1.jpg)
+
+<br /><br />
+### Fill in the required details
+
+There are 6 sections to go through:
+
+- Promotion Details
+- Division and Company
+- Type of Promotion
+- Items
+- Promotion Summary
+- Terms
+
+<br />
+![image](/assets/images/fig2.jpg)
+
+<br /><br />
+#### **Promotion Details**
+
+On this screen the user sets up details like
+
+- Start and End Date
+- Check if there are any Publications or Brochures
+- Select a Promotion Creation Level (Brand, Manufacturer, None)
+- Select a currency for the Target Income
+- Type in the Target Income Amount
+
+<br />
+![image](/assets/images/fig3.jpg)
+
+<br />
+> - The End Date cannot be earlier than the Start Date
+- Promotion Creation Level - A new promotion will be created for each Brand/Manufacturer previously accepted. The default option for Promotion Creation level is “None”.
+
+<br /><br />
+#### **Division and Company**
+
+<br />
+This screen allows the user to select a **Category**, **Division** and a **Company** (multiple selection).
+
+<br />
+> Once at least one Company is selected, all the following sections will be automatically pre-selected with all available options. The Next Step button is also available as we have a valid Shop selection.
+
+<br />
+![image](/assets/images/fig4.jpg)
+
+<br /><br />
+#### **Type of Promotion**
+
+<br />
+On this screen, the user sets the Promotion Type, Promotion Mechanic and all related details.
+
+<br />
+> You will have available only the Promotion Mechanics that are accepted by the previously selected Companies.
+
+<br />
+![image](/assets/images/fig5.jpg)
+
+<br />
+>For a more detailed description of Promotion Types and Promotion Details, please refer to this article
+[Promotion Types and Promotion Mechanics](#)
+
+
+<br /><br />
+#### **Items**
+
+<br />
+On this screen, the user must select the items that will be added to the promotion (or batch of promotions). Here we have a Filtering Section similar with the one at Division and Company.
+<br />
+
+First step is to select the **View** that you want to use for the filters. By default, **Global View** will be selected but you have the option to switch to **Local View**.
+
+<br />
+> Local View is available only when the promotion is created for one company.
+
+<br />
+Next, the items can be filtered by manufacturer, brand, groups, sub-groups and lines.
+
+<br />
+The is also the option to **Bulk Add Items** by Item ID or Search for them in the search field.
+
+<br />
+![image](/assets/images/fig6.jpg)
+
+<br />
+> The Add button reflects the number of Global Items available in your selection. Once you click on it, all local items matching to the global items in your selection will be added.
+
+After you add items, these will be added into grids in the lower section of the window.
+<br />
+Here you can have more tables, one corresponding to each currency of the Companies previously selected. Above each table, you can see the Currency and the matching Company codes. You also have a filter box, where you can search for a certain Item by any of the values available in the grid.
+
+<br />
+![image](/assets/images/fig7.jpg)
+
+<br />
+> When you add **Not Assorted** items in the grids, these will be marked by red highlight and an information icon in front of Global Item column. For each item, you can see the below details:
+- Date of last gathered price – For all items (assorted and not assorted) you will see the date of last gathered price while rolling your mouse over the DF Price or DP Price;
+- Shops in which the item is not assorted – by rolling your mouse over the information icon you will see a list of shops where that item is not present in the assortment. You can expand the information by clicking on the information icon and a pop-up window will be opened.
+
+<br /><br />
+#### **Promotion Summary**
+
+<br />
+On this screen you will see details about Promotion Status, ID, Company, Shops, Curremcy, Description and Item Details.
+
+<br />
+From Promotion Summary you have the below options:
+
+- View Created Promotions – by clicking on each Prompotion ID to open it in View Mode.
+- Export Promotion to excel – you can export one Promotion at once in excel format and you will receive the file downloaded from your browser.
+- Export unassorted items – you will receive the details for unassorted items in the file downloaded from your browser.
+- Export unmatched items – you will receive the details for unmatched items in the file downloaded from your browser.
+
+<br />
+> At this stage, any new promotion will not become Active until it has a Promotion Terms associated.
+
+<br />
+You can add terms by clicking on the Open Terms button or you can come back later to add Terms either by editing the promotions and reaching  the last step or by accessing the Terms Creation page straight from View Promotion Mode.
+
+<br />
+![image](/assets/images/fig8.jpg)
+
+<br /><br />
+#### Related articles
+
+[Promotion Types and Promotion Mechanics](#)
