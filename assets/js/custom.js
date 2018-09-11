@@ -1,5 +1,5 @@
   $(document).ready(function() {
-
+    //Set the menu state
     var url = window.location.pathname;
     if(url != "/" && url != "/search"){
       if(url.split(".").pop() == "html")
@@ -22,6 +22,10 @@
         }
       }
     }
+
+
+    //Remove last(current) item in breadcrumbs nav
+    $(".breadcrumbs .breadcrumb li:last-child").remove();
   });
 
   function createIdentifier(url) {

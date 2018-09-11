@@ -18,10 +18,9 @@ body {
     background-position: top;
     font-size: 13px;
     font-family: 'OpenSans', sans-serif;
+    line-height: 25px;
 }
-h1 {
-  text-align: center;
-}
+
 blockquote{
   padding: 10px 20px;
   margin: 0 0 20px;
@@ -274,13 +273,81 @@ input.form-control{
   margin-bottom: 85px;
 }
 
-.main-page a{
-  font-size: 14px;
-}
-
 .main-page a:hover, .main-page a:focus{
   text-decoration: none;
 }
+
+.main-page img{
+  max-width: 70%;
+}
+
+.main-page h1{
+  margin-bottom: 40px;
+}
+
+.main-page h2, .main-page h3, .main-page h4{
+  margin: 30px 0;
+}
+
+.main-page img, .main-page blockquote{
+  margin-bottom: 30px;
+}
+
+
+/*** BREADCRUMBS ***/
+nav.breadcrumbs.bootstrap ol {
+  margin-left: 0
+}
+
+nav.breadcrumbs.bootstrap .breadcrumb {
+  font-size: 1rem;
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: inherit;
+  border-radius: 0.25rem;
+}
+
+nav.breadcrumbs.bootstrap .breadcrumb::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav.breadcrumbs.bootstrap .breadcrumb-item {
+  float: left;
+}
+
+nav.breadcrumbs.bootstrap .breadcrumb-item+.breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #818a91;
+  content: "/";
+}
+
+nav.breadcrumbs.bootstrap .breadcrumb-item+.breadcrumb-item:hover::before {
+  text-decoration: underline;
+}
+
+nav.breadcrumbs.bootstrap .breadcrumb-item+.breadcrumb-item:hover::before {
+  text-decoration: none;
+}
+
+nav.breadcrumbs.bootstrap .breadcrumb-item-active {
+  color: #818a91;
+}
+
+nav.breadcrumbs.bootstrap .breadcrumb .icon {
+  display: inline-block;
+}
+
+nav.breadcrumbs.bootstrap .breadcrumb .icon svg {
+  height: 0.8rem;
+  width: 0.8rem;
+}
+
+
 
 
 /*** FOOTER ***/
