@@ -18,7 +18,6 @@ On clicking the **Promotion Management** tab a screen is displayed as in the fol
 <br />
 
 ![image](/assets/images/fig61.jpg)
-*Figure 6-1: Promotion Management Section*
 
 <br /><br />
 

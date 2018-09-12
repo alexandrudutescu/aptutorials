@@ -1,5 +1,5 @@
   $(document).ready(function() {
-
+    //Set the menu state
     var url = window.location.pathname;
     if(url != "/" && url != "/search"){
       if(url.split(".").pop() == "html")
@@ -22,12 +22,16 @@
         }
       }
     }
+
+
+    //Remove last(current) item in breadcrumbs nav
+    $(".breadcrumbs .breadcrumb li:last-child").remove();
   });
 
   function createIdentifier(url) {
     if(url.slice(0,1) == "/")
       url = url.substring(1);
-    if(url.slice(-1) == "/")
+    if(url.slice(-1) == "/" || url.slice(-1) == "#")
       url = url.slice(0, -1);
     return url.split("/").join("_").split("-").join("_");
   }

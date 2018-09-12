@@ -9,7 +9,6 @@ jQuery(function() {
   // Get the generated search_data.json file so lunr.js can search it locally.
   window.data = $.getJSON('/search_data.json')
                 .done(function() {
-                  //console.log( "second success" );
                 });
 
   // Wait for the data to load and add it to lunr
@@ -78,7 +77,6 @@ jQuery(function() {
         $search_results.html('<li>No results found.<br/>Please rephrase.</li>');
       }
     });
-    //console.log($search_results);
     return $search_results;
   }
 });
