@@ -39,16 +39,14 @@ jQuery(function() {
              }
        });
 
-
        event.preventDefault(); // avoid to execute the actual submit of the form.
-
-  });
+});
 
 
   function processAjaxData(response, results, urlPath){
       var objHtml = $.parseHTML(response);
-
       var content = $(objHtml).find("#content");
+
       document.getElementById("content").innerHTML = content.prop("innerHTML");
       document.getElementById("search-results").innerHTML = display_search_results(objHtml, results).prop("innerHTML");
       document.title = response.pageTitle;
