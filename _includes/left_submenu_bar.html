@@ -3,14 +3,14 @@
   {% for item in menu %}
     {% if item.children %}
       <li  data-toggle="collapse" data-target="#ul_{{ item.identifier }}" class="collapsed" id="{{ item.identifier }}">
-        <a href="{{ item.url }}"><i class="fa fa-gift fa-lg"></i> {{ item.title }} </a><a><span class="arrow"></span></a>
+        <a href="{{ item.url }}"><i class="fa fa-book fa-lg"></i> {{ item.title }} </a><a><span class="arrow"></span></a>
       </li>
       {% assign menu = item.children %}
       {% assign identifier = item.identifier %}
       {% include left_submenu_bar.html %}
     {% elsif item.children == null %}
     <li id="{{ item.identifier }}">
-      <a href="{{ item.url }}"><i class="fa fa-gift fa-lg"></i> {{ item.title }}</a>
+      <a href="{{ item.url }}"><i class="fa fa-book fa-lg"></i> {{ item.title }}</a>
     </li>
     {% endif %}
   {% endfor %}
